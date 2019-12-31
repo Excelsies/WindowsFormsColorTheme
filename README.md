@@ -1,7 +1,6 @@
 # Windows Forms Color Theme
 
 ![ThemeCreator](/ThemeCreator.png)
-Format: ![Alt Text](url)
 
 These 4 files will give the functionality of changing the colors of your application.
 

@@ -2,7 +2,7 @@
 
 ![ThemeCreator](/ThemeCreator.png)
 
-These 4 files will give the functionality of changing the colors of your application.
+These 4 files will give the functionality of changing the colors of your application via a simple color picker.
 
 There are a few things that need to be done after copying the files to your project to make this work.
 

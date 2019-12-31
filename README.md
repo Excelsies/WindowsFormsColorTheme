@@ -49,4 +49,8 @@ There are a few things that need to be done after copying the files to your proj
                 themeClass.resetTheme(this);//calls the function to change the colors to default
             }
             Refresh();
-- 
+- There are a few tools that may need to be tweaked to get the color theme to change appropriately
+  - For all Button controls, I recommend using the FlatStyle Flat or Popup as standard gives a white border and system will not be changed.
+  - TextBoxes and ListBoxes, I recommend using the BorderStyle FixedSingle or None as Fixed3D will give a white border
+  - DataGridViews, I recommend using the Single or None RowHeadersBorderStyle and the ColumnHeadersBorderStyle because the raised and sunken styles give a white border
+- Unfortunately, at this time, this will not adjust the scrollbar colors

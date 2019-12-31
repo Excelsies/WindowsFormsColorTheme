@@ -31,11 +31,11 @@ There are a few things that need to be done after copying the files to your proj
   - customThemeSet
     - This variable will also be listed in the Name column but will have the type bool. Leave the Scope as User and the value should be set to False - this variable is used to determine if the theme has changed or not
 - On each form you want to use this custom theme in, you will need to paste the following code right after you Initialize the form.
-  - if (Properties.Settings.Default.customThemeSet)
+  -          if (Properties.Settings.Default.customThemeSet)
                 themeClass.customTheme(this); //Sets the custom theme for the form
   - This statement calls the customTheme function that is inside the themeClass that you copied over, which will change all of the controls to the specified colors
 - You will need to place the following code on the function/event you use to open the form to setup your desired colors (I put this within a button click function)
-  - //creates and opens the themeForm to select and set the desired custom colors
+  -         //creates and opens the themeForm to select and set the desired custom colors
             var themeForm = new ThemeCreator();
             themeForm.ShowDialog(); 
 

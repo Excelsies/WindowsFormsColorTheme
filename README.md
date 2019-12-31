@@ -1,4 +1,4 @@
-#Windows Forms Color Theme
+Windows Forms Color Theme
 
 These 4 files will give the functionality of changing the colors of your application.
 

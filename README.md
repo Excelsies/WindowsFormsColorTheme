@@ -49,3 +49,4 @@ There are a few things that need to be done after copying the files to your proj
                 themeClass.resetTheme(this);//calls the function to change the colors to default
             }
             Refresh();
+- 

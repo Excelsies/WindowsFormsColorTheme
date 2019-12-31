@@ -34,3 +34,18 @@ There are a few things that need to be done after copying the files to your proj
   - if (Properties.Settings.Default.customThemeSet)
                 themeClass.customTheme(this); //Sets the custom theme for the form
   - This statement calls the customTheme function that is inside the themeClass that you copied over, which will change all of the controls to the specified colors
+- You will need to place the following code on the function/event you use to open the form to setup your desired colors (I put this within a button click function)
+  - //creates and opens the themeForm to select and set the desired custom colors
+            var themeForm = new ThemeCreator();
+            themeForm.ShowDialog(); 
+
+            //checks if the theme is set
+            if (Properties.Settings.Default.customThemeSet)
+            {
+                themeClass.customTheme(this);//calls the function to change the colors to the custom theme
+            }
+            else
+            {
+                themeClass.resetTheme(this);//calls the function to change the colors to default
+            }
+            Refresh();

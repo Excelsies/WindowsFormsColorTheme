@@ -1,8 +1,8 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace YOURNAMESPACE //Make sure you change this to whichever namespace you are using!
+namespace StartOfDay
 {
     class themeClass
     {
@@ -82,6 +82,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 //creates a TextBox variable to check whether or not it's a read only, multiline, or a regular box then sets appropriately
                 TextBox box = control as TextBox;
 
+                box.BorderStyle = BorderStyle.FixedSingle; //Sets the BorderStyle to FixedSingle to remove a white border around the textbox
+
                 if (!box.ReadOnly)
                     control.BackColor = activeTxtBoxColor; //If the box is not read only, it will set the active text box color
                 else if (box.Multiline)
@@ -90,13 +92,20 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                     control.BackColor = inactiveTxtBoxColor; //If the box is read only and is not a multiline textbox, it will set as the inactive textbox color 
             }
             //checks if the control is a button and sets the color appropriately
-            else if (control is Button) 
+            else if (control is Button)
+            {
+                Button button = control as Button;
+                button.FlatStyle = FlatStyle.Flat; //Sets the FlatStyle to Flat to remove a white border around the button
+
                 control.BackColor = buttonColor;
+            }
             //checks if the control is a datagrid
             else if (control is DataGridView)
             {
                 //Creates a DataGrid Variable in order to set the colors appropriately
                 DataGridView grid = control as DataGridView;
+                grid.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single; //Sets the RowHeadersBorderStyle to single to remove the white border around the row headers
+                grid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single; //Sets the ColumnHeadersBorderStyle to single to remove the white border around the Column headers
 
                 grid.BackColor = multiLineBoxColor;
                 grid.BackgroundColor = multiLineBoxColor;
@@ -121,7 +130,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 grid.GridColor = gridTxtColor;
 
                 grid.EnableHeadersVisualStyles = false;
-                
+
             }
             //if the control is not a datagrid, button, or textbox, it'll set the color appropriately
             else
@@ -202,6 +211,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             Text = new SolidBrush(uText);
             selectedText = new SolidBrush(sText);
             tabBorder = border;
+            tabControl1.Appearance = TabAppearance.Normal;
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed; //Needs the draw mode set to OwnerDrawFixed in order to customarily adjust the colors
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem); //Sets a custom function that is called when the tab control is 'drawn' to the form
             borderSet = false;

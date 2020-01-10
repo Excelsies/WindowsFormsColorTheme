@@ -2,7 +2,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace StartOfDay
+namespace YOURNAMESPACE //Make sure you change this to whichever namespace you are using!
 {
     class themeClass
     {

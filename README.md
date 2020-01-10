@@ -36,7 +36,7 @@ There are a few things that need to be done after copying the files to your proj
   -          if (Properties.Settings.Default.customThemeSet)
                 themeClass.customTheme(this); //Sets the custom theme for the form
   - This statement calls the customTheme function that is inside the themeClass that you copied over, which will change all of the controls to the specified colors
-- You will need to place the following code on the function/event you use to open the form to setup your desired colors (I put this within a button click function)
+- You will need to place the following code on the function/event (I use a toolsrip menuitem) you use to open the form to setup your desired colors (I put this within a button click function)
 
   -         //creates and opens the themeForm to select and set the desired custom colors
             var themeForm = new ThemeCreator();
@@ -58,6 +58,15 @@ There are a few things that need to be done after copying the files to your proj
   - For all Button controls, it will use the FlatStyle Flat as standard gives a white border and system will not be changed.
   - TextBoxes and ListBoxes, it will use the BorderStyle FixedSingle as Fixed3D will give a white border
   - DataGridViews, it will use the Single RowHeadersBorderStyle and the ColumnHeadersBorderStyle because the raised and sunken styles give a white border
+
+There is a known issue with the TabControl object. When it re-renders itself (coming out of minimized stat or leaving and coming back onto the screen), it will revert back to the original look. I am racking my brain on how to fix this, but in the meantime, you can work around this by adding a function/event (I use an additional toolsrip menuitem) with the following code:
+
+            if (Properties.Settings.Default.customThemeSet)
+            {
+                themeClass.resetTheme(this);//Sets the theme back to the default theme for the form
+                themeClass.customTheme(this);//Sets the theme back to the custom theme for the form
+            }
+
 
 Unfortunately, at this time, this will not adjust the scrollbar colors.
 

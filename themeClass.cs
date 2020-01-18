@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -28,9 +29,12 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         public static Color originalPressedTabColor = SystemColors.Control;
         public static Color originalPressedTabTxtColor = SystemColors.ControlText;
         public static Color originalTabBorderColor = SystemColors.Control;
+        public static Color originalHyperLinkColor = Color.Blue;
+        public static string originalFont = "Arial";
+        public static float originalFontSize = 8.25f;
 
         //call this function to set the custom theme colors
-        public static void SetCustomColors(Color backColor, Color txtColor, Color txtBoxColor, Color buttonColor, Color gridColor, Color gridTxtColor, Color gridHeaderColor, Color activeTxtBoxColor, Color inactiveTxtBoxColor, Color groupBoxColor, Color secGridColor, Color secGridTxtColor, Color gridSelectColor, Color gridSelectTxtColor, Color secGridSelectColor, Color secGridSelectTxtColor, Color tabColor, Color tabTxtColor, Color pressedTabColor, Color pressedTabTxtColor, Color tabBorderColor)
+        public static void SetCustomColors(Color backColor, Color txtColor, Color txtBoxColor, Color buttonColor, Color gridColor, Color gridTxtColor, Color gridHeaderColor, Color activeTxtBoxColor, Color inactiveTxtBoxColor, Color groupBoxColor, Color secGridColor, Color secGridTxtColor, Color gridSelectColor, Color gridSelectTxtColor, Color secGridSelectColor, Color secGridSelectTxtColor, Color tabColor, Color tabTxtColor, Color pressedTabColor, Color pressedTabTxtColor, Color tabBorderColor, Color Hyperlink, string font, float fontSize)
         {
             //Saves the custom colors to the computer (see Properties Settings.settings)
             Properties.Settings.Default.cusBackColor = backColor;
@@ -55,6 +59,10 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             Properties.Settings.Default.cusPressedTabColor = pressedTabColor;
             Properties.Settings.Default.cusPressedTabTxtColor = pressedTabTxtColor;
             Properties.Settings.Default.cusTabBorderColor = tabBorderColor;
+            Properties.Settings.Default.cusHyperLnkColor = Hyperlink;
+            Properties.Settings.Default.cusFont = font;
+            Properties.Settings.Default.cusFontSize = fontSize;
+
             Properties.Settings.Default.Save();
         }
 
@@ -62,19 +70,19 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         public static void customTheme(Control control)
         {
 
-            SetAllControlsColor(control, Properties.Settings.Default.cusBackColor, Properties.Settings.Default.cusTxtColor, Properties.Settings.Default.cusTxtBoxColor, Properties.Settings.Default.cusButtonColor, Properties.Settings.Default.cusGridColor, Properties.Settings.Default.cusGridTxtColor, Properties.Settings.Default.cusGridHeaderColor, Properties.Settings.Default.cusActiveTxtBoxColor, Properties.Settings.Default.cusInactiveTxtBoxColor, Properties.Settings.Default.cusGroupBoxColor, Properties.Settings.Default.cusSecGridColor, Properties.Settings.Default.cusSecGridTxtColor, Properties.Settings.Default.cusGridSelectColor, Properties.Settings.Default.cusGridSelectTxtColor, Properties.Settings.Default.cusSecGridSelectColor, Properties.Settings.Default.cusSecGridSelectTxtColor, Properties.Settings.Default.cusTabColor, Properties.Settings.Default.cusTabTxtColor, Properties.Settings.Default.cusPressedTabColor, Properties.Settings.Default.cusPressedTabTxtColor, Properties.Settings.Default.cusTabBorderColor);
+            SetAllControlsColor(control, Properties.Settings.Default.cusBackColor, Properties.Settings.Default.cusTxtColor, Properties.Settings.Default.cusTxtBoxColor, Properties.Settings.Default.cusButtonColor, Properties.Settings.Default.cusGridColor, Properties.Settings.Default.cusGridTxtColor, Properties.Settings.Default.cusGridHeaderColor, Properties.Settings.Default.cusActiveTxtBoxColor, Properties.Settings.Default.cusInactiveTxtBoxColor, Properties.Settings.Default.cusGroupBoxColor, Properties.Settings.Default.cusSecGridColor, Properties.Settings.Default.cusSecGridTxtColor, Properties.Settings.Default.cusGridSelectColor, Properties.Settings.Default.cusGridSelectTxtColor, Properties.Settings.Default.cusSecGridSelectColor, Properties.Settings.Default.cusSecGridSelectTxtColor, Properties.Settings.Default.cusTabColor, Properties.Settings.Default.cusTabTxtColor, Properties.Settings.Default.cusPressedTabColor, Properties.Settings.Default.cusPressedTabTxtColor, Properties.Settings.Default.cusTabBorderColor, Properties.Settings.Default.cusHyperLnkColor, Properties.Settings.Default.cusFont, Properties.Settings.Default.cusFontSize);
         }
 
         //Call this to reset the theme to the original colors
         public static void resetTheme(Control control)
         {
-            SetAllControlsColor(control, originalBackColor, originalTxtColor, originalTxtBoxColor, originalButtonColor, originalGridColor, originalGridTxtColor, originalGridHeaderColor, originalActiveTxtBoxColor, originalInactiveTxtBoxColor, originalGroupBoxColor, originalSecGridColor, originalSecGridTxtColor, originalGridSelectColor, originalGridSelectTxtColor, originalSecGridSelectColor, originalSecGridSelectTxtColor, originalTabColor, originalTabTxtColor, originalPressedTabColor, originalPressedTabTxtColor, originalTabBorderColor);
+            SetAllControlsColor(control, originalBackColor, originalTxtColor, originalTxtBoxColor, originalButtonColor, originalGridColor, originalGridTxtColor, originalGridHeaderColor, originalActiveTxtBoxColor, originalInactiveTxtBoxColor, originalGroupBoxColor, originalSecGridColor, originalSecGridTxtColor, originalGridSelectColor, originalGridSelectTxtColor, originalSecGridSelectColor, originalSecGridSelectTxtColor, originalTabColor, originalTabTxtColor, originalPressedTabColor, originalPressedTabTxtColor, originalTabBorderColor, originalHyperLinkColor, originalFont, originalFontSize);
 
         }
 
 
         //Sets all of the controls' colors
-        private static void SetAllControlsColor(Control control, Color backColor, Color txtColor, Color multiLineBoxColor, Color buttonColor, Color gridColor, Color gridTxtColor, Color gridHeaderColor, Color activeTxtBoxColor, Color inactiveTxtBoxColor, Color groupBoxColor, Color secGridColor, Color secGridTxtColor, Color gridSelectColor, Color gridSelectTxtColor, Color secGridSelectColor, Color secGridSelectTxtColor, Color tabColor, Color tabTxtColor, Color pressedTabColor, Color pressedTabTxtColor, Color tabBorderColor)
+        private static void SetAllControlsColor(Control control, Color backColor, Color txtColor, Color multiLineBoxColor, Color buttonColor, Color gridColor, Color gridTxtColor, Color gridHeaderColor, Color activeTxtBoxColor, Color inactiveTxtBoxColor, Color groupBoxColor, Color secGridColor, Color secGridTxtColor, Color gridSelectColor, Color gridSelectTxtColor, Color secGridSelectColor, Color secGridSelectTxtColor, Color tabColor, Color tabTxtColor, Color pressedTabColor, Color pressedTabTxtColor, Color tabBorderColor, Color Hyperlink, string font, float fontSize)
         {
             //checks if the control is a TextBox
             if (control is TextBox)
@@ -175,6 +183,24 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             //Sets the text color
             control.ForeColor = txtColor;
 
+            //Sets the LinkLabel color
+            if(control is LinkLabel)
+            {
+                LinkLabel hyperlink = control as LinkLabel;
+                hyperlink.LinkColor = Hyperlink;
+            }
+
+            //fixes the border
+            if(control is ComboBox)
+            {
+                //creates a ToolStripComboBox variable to check whether or not it's a read only, multiline, or a regular box then sets appropriately
+                ComboBox box = control as ComboBox;
+                box.FlatStyle = FlatStyle.Flat;
+                control = new MyComboBox(activeTxtBoxColor);
+            }
+
+            control.Font = new Font(font, fontSize);
+
             //checks if the control has children
             if (control.HasChildren)
             {
@@ -182,7 +208,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 foreach (Control childControl in control.Controls)
                 {
                     //for the child control, it calls the SetAllControlsColor function to set the colors appropriately
-                    SetAllControlsColor(childControl, backColor, txtColor, multiLineBoxColor, buttonColor, gridColor, gridTxtColor, gridHeaderColor, activeTxtBoxColor, inactiveTxtBoxColor, groupBoxColor, secGridColor, secGridTxtColor, gridSelectColor, gridSelectTxtColor, secGridSelectColor, secGridSelectTxtColor, tabColor, tabTxtColor, pressedTabColor, pressedTabTxtColor, tabBorderColor);
+                    SetAllControlsColor(childControl, backColor, txtColor, multiLineBoxColor, buttonColor, gridColor, gridTxtColor, gridHeaderColor, activeTxtBoxColor, inactiveTxtBoxColor, groupBoxColor, secGridColor, secGridTxtColor, gridSelectColor, gridSelectTxtColor, secGridSelectColor, secGridSelectTxtColor, tabColor, tabTxtColor, pressedTabColor, pressedTabTxtColor, tabBorderColor, Hyperlink, font, fontSize);
                 }
             }
         }
@@ -191,6 +217,10 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
     }
 
 
+    /// <summary>
+    /// TabControl Class
+    /// </summary>
+    //Call this class to adjust how a TabControl renders itself
     public class MyTab : TabControl
     { 
         // Define the variables
@@ -201,6 +231,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         Brush selectedText;
         Color tabBorder;
         bool borderSet = false;
+        
 
         //call this to set the variables appropriately
         public MyTab(TabControl tab, Color sBackground, Color uBackground, Color sText, Color uText, Color border)
@@ -216,8 +247,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem); //Sets a custom function that is called when the tab control is 'drawn' to the form
             borderSet = false;
         }
-        
-            private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             // This event is called once for each tab button in your tab control
             // e.Index is the index of the tab in the TabPages collection.
@@ -282,6 +313,9 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
 
     } 
 
+    /// <summary>
+    /// ToolStrip Class
+    /// </summary>
     //Call this class to adjust how a toolstrip renders itself
     public class MySR : ToolStripSystemRenderer
     {
@@ -341,7 +375,47 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             }
         }
     }
-    
+
+    public class MyComboBox : ComboBox
+    {
+        private const int WM_PAINT = 0xF;
+        private int buttonWidth = SystemInformation.HorizontalScrollBarArrowWidth;
+        
+        public MyComboBox(Color borderC)
+        {
+            BorderColor = borderC;
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == WM_PAINT)
+            {
+                using (var g = Graphics.FromHwnd(Handle))
+                {
+                    // Uncomment this if you don't want the "highlight border".
+                    /*
+                    using (var p = new Pen(this.BorderColor, 1))
+                    {
+                        g.DrawRectangle(p, 0, 0, Width - 1, Height - 1);
+                    }*/
+                    using (var p = new Pen(this.BorderColor, 3))
+                    {
+                        g.DrawRectangle(p, 1, 1, Width - buttonWidth - 3, Height - 3);
+                    }
+                }
+            }
+        }
+
+        [Browsable(true)]
+        [Category("Appearance")]
+        [DefaultValue(typeof(Color), "DimGray")]
+        public Color BorderColor { get; set; }
+
+
+    }
+
+
 }
 
 

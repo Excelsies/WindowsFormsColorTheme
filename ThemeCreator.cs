@@ -1,5 +1,7 @@
-﻿using System;
+using System;
 using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace YOURNAMESPACE //Make sure you change this to whichever namespace you are using!
@@ -28,12 +30,19 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         Color darkTabColor = Color.FromArgb(55, 55, 55);
         Color darkTabTxtColor = Color.Red;
         Color darkTabBorderColor = Color.FromArgb(35, 35, 35);
+        Color darkHyperTxtColor = Color.Blue;
+        string darkFont = "Arial";
+        float darkFontSize = 8.25f;
 
         public ThemeCreator()
         {
             InitializeComponent();
             //centers the form
             this.CenterToParent();
+
+            fontCmboBx.DrawItem += ComboBoxFonts_DrawItem;
+            fontCmboBx.DataSource = FontFamily.Families.ToList();
+            fontCmboBx.DropDownStyle = ComboBoxStyle.DropDownList;
 
             //checks if the theme is set
             if (Properties.Settings.Default.customThemeSet)
@@ -62,6 +71,9 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 tabPressedBtn.BackColor = Properties.Settings.Default.cusPressedTabColor;
                 tabPressedTxtBtn.BackColor = Properties.Settings.Default.cusPressedTabTxtColor;
                 tabBorderBtn.BackColor = Properties.Settings.Default.cusTabBorderColor;
+                hyperLinkBtn.BackColor = Properties.Settings.Default.cusHyperLnkColor;
+                fontSizeDrpDwn.Value = Convert.ToDecimal(Properties.Settings.Default.cusFontSize);
+                fontCmboBx.SelectedIndex = Properties.Settings.Default.cusFontInd;
             }
             else
             {
@@ -88,16 +100,39 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 tabPressedBtn.BackColor = themeClass.originalPressedTabColor;
                 tabPressedTxtBtn.BackColor = themeClass.originalPressedTabTxtColor;
                 tabBorderBtn.BackColor = themeClass.originalTabBorderColor;
+                hyperLinkBtn.BackColor = themeClass.originalHyperLinkColor;
+                fontSizeDrpDwn.Value = Convert.ToDecimal(themeClass.originalFontSize);
+                fontCmboBx.SelectedIndex = 1;
             }
             
-
+            
+            
         }
 
+        private void ComboBoxFonts_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            var comboBox = (ComboBox)sender;
+            var fontFamily = (FontFamily)comboBox.Items[e.Index];
+            var font = new Font(fontFamily, comboBox.Font.SizeInPoints);
+            Brush text = new SolidBrush(txtBtn.BackColor);
+
+            e.DrawBackground();
+            e.Graphics.DrawString(font.Name, font, text, e.Bounds.X, e.Bounds.Y);
+        }
 
         private void setThemeBtn_Click(object sender, EventArgs e)
         {
+            //gets the requested font
+            string s = fontCmboBx.SelectedItem.ToString();
+            int start = s.IndexOf('=') + 1;
+            int end = s.IndexOf(']', start);
+            string selectedFont = s.Substring(start, end - start);
+
+            //Saves the index of the selected font
+            Properties.Settings.Default.cusFontInd = fontCmboBx.SelectedIndex;
+
             //Sets the custom colors within the global variables of the themeClass based on the background colors of the buttons
-            themeClass.SetCustomColors(backgroundBtn.BackColor, txtBtn.BackColor, txtBoxBtn.BackColor, btnColorButton.BackColor, gridBtn.BackColor, gridTxtBtn.BackColor, gridHeaderBtn.BackColor, resultTxtBoxBtn.BackColor, inactiveTxtBtn.BackColor, groupBoxBtn.BackColor, scndGridBtn.BackColor, secGridTxtBtn.BackColor, gridSelectedBtn.BackColor, gridSelectedTxtBtn.BackColor, secGridSelectedBtn.BackColor, secGridSelectedTxtBtn.BackColor, tabBtn.BackColor, tabTxtBtn.BackColor, tabPressedBtn.BackColor, tabPressedTxtBtn.BackColor, tabBorderBtn.BackColor);
+            themeClass.SetCustomColors(backgroundBtn.BackColor, txtBtn.BackColor, txtBoxBtn.BackColor, btnColorButton.BackColor, gridBtn.BackColor, gridTxtBtn.BackColor, gridHeaderBtn.BackColor, resultTxtBoxBtn.BackColor, inactiveTxtBtn.BackColor, groupBoxBtn.BackColor, scndGridBtn.BackColor, secGridTxtBtn.BackColor, gridSelectedBtn.BackColor, gridSelectedTxtBtn.BackColor, secGridSelectedBtn.BackColor, secGridSelectedTxtBtn.BackColor, tabBtn.BackColor, tabTxtBtn.BackColor, tabPressedBtn.BackColor, tabPressedTxtBtn.BackColor, tabBorderBtn.BackColor, hyperLinkBtn.BackColor, selectedFont, (float)fontSizeDrpDwn.Value);
             Properties.Settings.Default.customThemeSet = true; //sets the custom theme as on
             Properties.Settings.Default.Save();
             themeClass.customTheme(this); //calls the function to change the colors to the custom theme
@@ -115,7 +150,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         private void darkThemeBtn_Click(object sender, EventArgs e)
         {
             //Sets the custom colors within the global variables of the themeClass based on the predefined colors
-            themeClass.SetCustomColors(darkBackColor, darkTxtColor, darkTxtBoxColor, darkButtonColor, darkGridColor, darkGridTxtColor, darkGridHeaderColor, darkActiveTxtBoxColor, darkInactiveTxtBoxColor, darkGroupBoxColor, darkSecGridColor, darkSecGridTxtColor, darkGridSelectColor, darkGridSelectTxtColor, darkSecGridSelectColor, darkSecGridSelectTxtColor, darkTabColor, darkTabTxtColor, darkTabPressed, darkTabTxtPressedColor, darkTabPressed);
+            themeClass.SetCustomColors(darkBackColor, darkTxtColor, darkTxtBoxColor, darkButtonColor, darkGridColor, darkGridTxtColor, darkGridHeaderColor, darkActiveTxtBoxColor, darkInactiveTxtBoxColor, darkGroupBoxColor, darkSecGridColor, darkSecGridTxtColor, darkGridSelectColor, darkGridSelectTxtColor, darkSecGridSelectColor, darkSecGridSelectTxtColor, darkTabColor, darkTabTxtColor, darkTabPressed, darkTabTxtPressedColor, darkTabPressed, darkHyperTxtColor, darkFont, darkFontSize);
             Properties.Settings.Default.customThemeSet = true; //calls the function to change the colors to the custom theme
             Properties.Settings.Default.Save();
             themeClass.customTheme(this); //calls the function to change the colors to the custom theme
@@ -334,6 +369,16 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             {
                 //selecting OK sets the background color of the button to the color selected
                 tabBorderBtn.BackColor = colorPicker.Color;
+            }
+        }
+
+        private void hyperLinkBtn_Click(object sender, EventArgs e)
+        {
+            //enables the Color Dialog tool
+            if (colorPicker.ShowDialog() == DialogResult.OK)
+            {
+                //selecting OK sets the background color of the button to the color selected
+                hyperLinkBtn.BackColor = colorPicker.Color;
             }
         }
     }

@@ -29,9 +29,16 @@ There are a few things that need to be done after copying the files to your proj
   - cusPressedTabColor
   - cusPressedTabTxtColor
   - cusTabBorderColor
+  - cusHyperLnkColor
     - Each of the above will be listed in the Name column, each with the Type System.Drawing.Color you can leave the Scope as User and the value doesn't need to be adjusted (this value will be changed when the user selects their colors)
   - customThemeSet
     - This variable will also be listed in the Name column but will have the type bool. Leave the Scope as User and the value should be set to False - this variable is used to determine if the theme has changed or not
+  - cusFont
+    - This will be listed in the Name column and the type should be string. Set the value as Arial
+  - cusFontSize
+    - This will be listed in the Name column and the type should be float. Set the value as 8.25
+  - cusFontInd
+    - This will be listed in the Name column and the type should be float. Set the value as 8.25
 - On each form you want to use this custom theme in, you will need to paste the following code right after you Initialize the form.
   -          if (Properties.Settings.Default.customThemeSet)
                 themeClass.customTheme(this); //Sets the custom theme for the form

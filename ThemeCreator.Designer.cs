@@ -763,13 +763,15 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // fontSizeDrpDwn
             // 
+            this.fontSizeDrpDwn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.fontSizeDrpDwn.DecimalPlaces = 2;
             this.fontSizeDrpDwn.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.fontSizeDrpDwn.Location = new System.Drawing.Point(575, 258);
+            this.fontSizeDrpDwn.Location = new System.Drawing.Point(575, 197);
             this.fontSizeDrpDwn.Maximum = new decimal(new int[] {
             26,
             0,
@@ -793,7 +795,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 290);
+            this.ClientSize = new System.Drawing.Size(960, 268);
             this.Controls.Add(this.fontSizeDrpDwn);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.fontCmboBx);

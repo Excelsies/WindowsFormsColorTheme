@@ -8,7 +8,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
 {
     public partial class ThemeCreator : Form
     {
-        //defines the default dark theme variables
+        //defines the premade dark theme colors
         Color darkBackColor = Color.Black;
         Color darkTxtColor = Color.Red;
         Color darkTxtBoxColor = Color.FromArgb(25, 25, 25);
@@ -32,6 +32,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         Color darkTabBorderColor = Color.FromArgb(35, 35, 35);
         Color darkHyperTxtColor = Color.Blue;
         string darkFont = "Arial";
+        int darkFontInd = 1;
         float darkFontSize = 8.25f;
 
         public ThemeCreator()
@@ -39,8 +40,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             InitializeComponent();
             //centers the form
             this.CenterToParent();
-            
-            //sets up the ComboBox for the fonts
+
             fontCmboBx.DrawItem += ComboBoxFonts_DrawItem;
             fontCmboBx.DataSource = FontFamily.Families.ToList();
             fontCmboBx.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -105,12 +105,11 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 fontSizeDrpDwn.Value = Convert.ToDecimal(themeClass.originalFontSize);
                 fontCmboBx.SelectedIndex = 1;
             }
-            
-            
-            
+
+
+
         }
-        
-        //Sets up a custom draw event so each font was listed correctly with it's applicable font
+
         private void ComboBoxFonts_DrawItem(object sender, DrawItemEventArgs e)
         {
             var comboBox = (ComboBox)sender;
@@ -143,6 +142,10 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
+            //Saves the index for the default font
+            Properties.Settings.Default.cusFontInd = 1;
+
+
             Properties.Settings.Default.customThemeSet = false; //sets the custom theme as off
             Properties.Settings.Default.Save();
             themeClass.resetTheme(this); //calls the function to change the colors to default
@@ -151,6 +154,10 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
 
         private void darkThemeBtn_Click(object sender, EventArgs e)
         {
+
+            //Saves the index for the dark Font font
+            Properties.Settings.Default.cusFontInd = darkFontInd;
+
             //Sets the custom colors within the global variables of the themeClass based on the predefined colors
             themeClass.SetCustomColors(darkBackColor, darkTxtColor, darkTxtBoxColor, darkButtonColor, darkGridColor, darkGridTxtColor, darkGridHeaderColor, darkActiveTxtBoxColor, darkInactiveTxtBoxColor, darkGroupBoxColor, darkSecGridColor, darkSecGridTxtColor, darkGridSelectColor, darkGridSelectTxtColor, darkSecGridSelectColor, darkSecGridSelectTxtColor, darkTabColor, darkTabTxtColor, darkTabPressed, darkTabTxtPressedColor, darkTabPressed, darkHyperTxtColor, darkFont, darkFontSize);
             Properties.Settings.Default.customThemeSet = true; //calls the function to change the colors to the custom theme

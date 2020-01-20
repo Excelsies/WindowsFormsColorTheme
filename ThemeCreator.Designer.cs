@@ -80,8 +80,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             this.hyperLinkBtn = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.fontCmboBx = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.fontSizeDrpDwn = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fontSizeDrpDwn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,9 +111,9 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // setThemeBtn
             // 
-            this.setThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.setThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.setThemeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setThemeBtn.Location = new System.Drawing.Point(777, 195);
+            this.setThemeBtn.Location = new System.Drawing.Point(776, 195);
             this.setThemeBtn.Name = "setThemeBtn";
             this.setThemeBtn.Size = new System.Drawing.Size(75, 23);
             this.setThemeBtn.TabIndex = 2;
@@ -123,8 +123,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // backgroundBtn
             // 
-            this.backgroundBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.backgroundBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.backgroundBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backgroundBtn.Location = new System.Drawing.Point(140, 157);
@@ -138,8 +138,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // gridBtn
             // 
-            this.gridBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridBtn.Location = new System.Drawing.Point(354, 99);
@@ -153,8 +153,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // inactiveTxtBtn
             // 
-            this.inactiveTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.inactiveTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inactiveTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inactiveTxtBtn.Location = new System.Drawing.Point(140, 128);
@@ -168,8 +168,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // resultTxtBoxBtn
             // 
-            this.resultTxtBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.resultTxtBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.resultTxtBoxBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.resultTxtBoxBtn.Location = new System.Drawing.Point(617, 128);
@@ -183,8 +183,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // gridHeaderBtn
             // 
-            this.gridHeaderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridHeaderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridHeaderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridHeaderBtn.Location = new System.Drawing.Point(354, 12);
@@ -198,8 +198,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // gridTxtBtn
             // 
-            this.gridTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridTxtBtn.Location = new System.Drawing.Point(354, 41);
@@ -213,8 +213,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // btnColorButton
             // 
-            this.btnColorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnColorButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColorButton.Location = new System.Drawing.Point(140, 70);
@@ -228,8 +228,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // txtBoxBtn
             // 
-            this.txtBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBoxBtn.Location = new System.Drawing.Point(140, 41);
@@ -243,8 +243,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // txtBtn
             // 
-            this.txtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtBtn.Location = new System.Drawing.Point(140, 12);
@@ -258,8 +258,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(40, 162);
@@ -270,8 +270,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(77, 17);
@@ -282,8 +282,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(67, 75);
@@ -294,8 +294,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(295, 104);
@@ -306,8 +306,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(272, 46);
@@ -318,8 +318,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(58, 46);
@@ -330,8 +330,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(253, 17);
@@ -342,8 +342,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(503, 133);
@@ -354,8 +354,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 133);
@@ -366,7 +366,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // darkThemeBtn
             // 
-            this.darkThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.darkThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.darkThemeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.darkThemeBtn.Location = new System.Drawing.Point(6, 195);
             this.darkThemeBtn.Name = "darkThemeBtn";
@@ -378,8 +378,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(50, 104);
@@ -390,8 +390,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // groupBoxBtn
             // 
-            this.groupBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxBtn.Location = new System.Drawing.Point(140, 99);
@@ -405,8 +405,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(242, 133);
@@ -417,8 +417,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // scndGridBtn
             // 
-            this.scndGridBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.scndGridBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scndGridBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.scndGridBtn.Location = new System.Drawing.Point(354, 128);
@@ -432,8 +432,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(221, 75);
@@ -444,8 +444,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // secGridTxtBtn
             // 
-            this.secGridTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.secGridTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.secGridTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.secGridTxtBtn.Location = new System.Drawing.Point(354, 70);
@@ -459,8 +459,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(514, 17);
@@ -471,8 +471,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // gridSelectedBtn
             // 
-            this.gridSelectedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridSelectedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridSelectedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridSelectedBtn.Location = new System.Drawing.Point(617, 12);
@@ -486,8 +486,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(490, 46);
@@ -498,8 +498,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // gridSelectedTxtBtn
             // 
-            this.gridSelectedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridSelectedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridSelectedTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gridSelectedTxtBtn.Location = new System.Drawing.Point(617, 41);
@@ -513,8 +513,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(436, 104);
@@ -525,8 +525,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // secGridSelectedTxtBtn
             // 
-            this.secGridSelectedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.secGridSelectedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.secGridSelectedTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.secGridSelectedTxtBtn.Location = new System.Drawing.Point(618, 99);
@@ -540,8 +540,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(460, 75);
@@ -552,8 +552,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // secGridSelectedBtn
             // 
-            this.secGridSelectedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.secGridSelectedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.secGridSelectedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.secGridSelectedBtn.Location = new System.Drawing.Point(617, 70);
@@ -567,8 +567,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(733, 104);
@@ -579,8 +579,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // tabPressedTxtBtn
             // 
-            this.tabPressedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabPressedTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabPressedTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabPressedTxtBtn.Location = new System.Drawing.Point(857, 99);
@@ -594,8 +594,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(757, 75);
@@ -606,8 +606,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // tabPressedBtn
             // 
-            this.tabPressedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabPressedBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabPressedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabPressedBtn.Location = new System.Drawing.Point(857, 70);
@@ -621,8 +621,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(774, 46);
@@ -633,8 +633,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // tabTxtBtn
             // 
-            this.tabTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabTxtBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabTxtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabTxtBtn.Location = new System.Drawing.Point(857, 41);
@@ -648,8 +648,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(798, 17);
@@ -660,8 +660,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // tabBtn
             // 
-            this.tabBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabBtn.Location = new System.Drawing.Point(857, 12);
@@ -675,8 +675,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(728, 133);
@@ -687,8 +687,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // tabBorderBtn
             // 
-            this.tabBorderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.tabBorderBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabBorderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tabBorderBtn.Location = new System.Drawing.Point(857, 128);
@@ -702,8 +702,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(270, 162);
@@ -714,8 +714,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // hyperLinkBtn
             // 
-            this.hyperLinkBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.hyperLinkBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hyperLinkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hyperLinkBtn.Location = new System.Drawing.Point(354, 157);
@@ -729,8 +729,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(295, 200);
             this.label23.Name = "label23";
@@ -740,8 +739,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             // fontCmboBx
             // 
-            this.fontCmboBx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fontCmboBx.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.fontCmboBx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.fontCmboBx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fontCmboBx.FormattingEnabled = true;
@@ -750,28 +748,16 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             this.fontCmboBx.Size = new System.Drawing.Size(121, 21);
             this.fontCmboBx.TabIndex = 49;
             // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(494, 200);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(75, 13);
-            this.label24.TabIndex = 50;
-            this.label24.Text = "Text Font Size";
-            // 
             // fontSizeDrpDwn
             // 
-            this.fontSizeDrpDwn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.fontSizeDrpDwn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.fontSizeDrpDwn.DecimalPlaces = 2;
             this.fontSizeDrpDwn.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
             65536});
-            this.fontSizeDrpDwn.Location = new System.Drawing.Point(575, 197);
+            this.fontSizeDrpDwn.Location = new System.Drawing.Point(561, 197);
             this.fontSizeDrpDwn.Maximum = new decimal(new int[] {
             26,
             0,
@@ -784,12 +770,22 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             65536});
             this.fontSizeDrpDwn.Name = "fontSizeDrpDwn";
             this.fontSizeDrpDwn.Size = new System.Drawing.Size(62, 20);
-            this.fontSizeDrpDwn.TabIndex = 51;
+            this.fontSizeDrpDwn.TabIndex = 53;
             this.fontSizeDrpDwn.Value = new decimal(new int[] {
             10,
             0,
             0,
             65536});
+            // 
+            // label24
+            // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(480, 200);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 13);
+            this.label24.TabIndex = 52;
+            this.label24.Text = "Text Font Size";
             // 
             // ThemeCreator
             // 
@@ -911,7 +907,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
         private System.Windows.Forms.Button hyperLinkBtn;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox fontCmboBx;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.NumericUpDown fontSizeDrpDwn;
+        private System.Windows.Forms.Label label24;
     }
 }

@@ -198,7 +198,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
                 box.FlatStyle = FlatStyle.Flat;
                 control = new MyComboBox(activeTxtBoxColor);
             }
-
+            
+            //Sets the font and font size of the control
             control.Font = new Font(font, fontSize);
 
             //checks if the control has children
@@ -375,47 +376,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             }
         }
     }
-
-    public class MyComboBox : ComboBox
-    {
-        private const int WM_PAINT = 0xF;
-        private int buttonWidth = SystemInformation.HorizontalScrollBarArrowWidth;
-        
-        public MyComboBox(Color borderC)
-        {
-            BorderColor = borderC;
-        }
-
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            if (m.Msg == WM_PAINT)
-            {
-                using (var g = Graphics.FromHwnd(Handle))
-                {
-                    // Uncomment this if you don't want the "highlight border".
-                    /*
-                    using (var p = new Pen(this.BorderColor, 1))
-                    {
-                        g.DrawRectangle(p, 0, 0, Width - 1, Height - 1);
-                    }*/
-                    using (var p = new Pen(this.BorderColor, 3))
-                    {
-                        g.DrawRectangle(p, 1, 1, Width - buttonWidth - 3, Height - 3);
-                    }
-                }
-            }
-        }
-
-        [Browsable(true)]
-        [Category("Appearance")]
-        [DefaultValue(typeof(Color), "DimGray")]
-        public Color BorderColor { get; set; }
-
-
-    }
-
-
+    
 }
 
 

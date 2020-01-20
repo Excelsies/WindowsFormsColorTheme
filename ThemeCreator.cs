@@ -8,7 +8,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
 {
     public partial class ThemeCreator : Form
     {
-        //defines the premade dark theme colors
+        //defines the default dark theme variables
         Color darkBackColor = Color.Black;
         Color darkTxtColor = Color.Red;
         Color darkTxtBoxColor = Color.FromArgb(25, 25, 25);
@@ -39,7 +39,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             InitializeComponent();
             //centers the form
             this.CenterToParent();
-
+            
+            //sets up the ComboBox for the fonts
             fontCmboBx.DrawItem += ComboBoxFonts_DrawItem;
             fontCmboBx.DataSource = FontFamily.Families.ToList();
             fontCmboBx.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -108,7 +109,8 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             
             
         }
-
+        
+        //Sets up a custom draw event so each font was listed correctly with it's applicable font
         private void ComboBoxFonts_DrawItem(object sender, DrawItemEventArgs e)
         {
             var comboBox = (ComboBox)sender;

@@ -89,7 +89,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.cancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelBtn.Location = new System.Drawing.Point(857, 256);
+            this.cancelBtn.Location = new System.Drawing.Point(857, 195);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 0;
@@ -101,7 +101,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.resetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Location = new System.Drawing.Point(93, 256);
+            this.resetBtn.Location = new System.Drawing.Point(93, 195);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(75, 23);
             this.resetBtn.TabIndex = 1;
@@ -113,7 +113,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.setThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.setThemeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setThemeBtn.Location = new System.Drawing.Point(12, 256);
+            this.setThemeBtn.Location = new System.Drawing.Point(777, 195);
             this.setThemeBtn.Name = "setThemeBtn";
             this.setThemeBtn.Size = new System.Drawing.Size(75, 23);
             this.setThemeBtn.TabIndex = 2;
@@ -368,7 +368,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.darkThemeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.darkThemeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.darkThemeBtn.Location = new System.Drawing.Point(771, 256);
+            this.darkThemeBtn.Location = new System.Drawing.Point(6, 195);
             this.darkThemeBtn.Name = "darkThemeBtn";
             this.darkThemeBtn.Size = new System.Drawing.Size(81, 23);
             this.darkThemeBtn.TabIndex = 21;
@@ -732,7 +732,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(295, 261);
+            this.label23.Location = new System.Drawing.Point(295, 200);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(52, 13);
             this.label23.TabIndex = 48;
@@ -745,7 +745,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             this.fontCmboBx.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.fontCmboBx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fontCmboBx.FormattingEnabled = true;
-            this.fontCmboBx.Location = new System.Drawing.Point(353, 258);
+            this.fontCmboBx.Location = new System.Drawing.Point(353, 197);
             this.fontCmboBx.Name = "fontCmboBx";
             this.fontCmboBx.Size = new System.Drawing.Size(121, 21);
             this.fontCmboBx.TabIndex = 49;
@@ -755,7 +755,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(494, 261);
+            this.label24.Location = new System.Drawing.Point(494, 200);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(75, 13);
             this.label24.TabIndex = 50;
@@ -795,7 +795,7 @@ namespace YOURNAMESPACE //Make sure you change this to whichever namespace you a
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 268);
+            this.ClientSize = new System.Drawing.Size(944, 229);
             this.Controls.Add(this.fontSizeDrpDwn);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.fontCmboBx);
